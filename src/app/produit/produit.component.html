@@ -1,0 +1,15 @@
+<h2>Liste des produits sans recherche : </h2>
+
+<ul class="list-group">
+    <li *ngFor="let produit of (listProduits | async)as folder" class="list-group-item">
+        {{ produit.idProduit}} : {{ produit.nomProduit }} | {{ produit.prixProduit }} €
+        <button (click)="addProduit(produit)">Ajouter</button>
+        <button (click)="delProduit(produit)">Supprimer</button>
+    </li>
+</ul>
+
+<p>liste-produits works!</p>
+
+<div *ngFor="let c of lstProduit$ | async">
+  {{ c.nomProduit }}
+</div>

@@ -1,0 +1,27 @@
+[
+    {
+        "idProduit": 1,
+        "nomProduit": "pantalon",
+        "prixProduit": 50
+    },
+    {
+        "idProduit": 2,
+        "nomProduit": "t shirt",
+        "prixProduit": 20
+    },
+    {
+        "idProduit": 3,
+        "nomProduit": "pull",
+        "prixProduit": 40
+    },
+    {
+        "idProduit": 4,
+        "nomProduit": "chaussettes",
+        "prixProduit": 10
+    },
+    {
+        "idProduit": 5,
+        "nomProduit": "bandana",
+        "prixProduit": 15
+    }
+]

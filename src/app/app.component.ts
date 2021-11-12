@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Select } from '@ngxs/store';
+import { Observable } from 'rxjs';
+import { ProduitState } from './states/produit-state';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'AppliTP4';
+  title = 'product';
+
+  @Select(ProduitState.getNbProduits) nb$?: Observable<number>;
+  constructor() {}
 }

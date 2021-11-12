@@ -1,0 +1,17 @@
+
+<div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">Filtrer sur la liste</span>
+    <input type="recherche" class="form-control" [(ngModel)]="recherche">
+</div>
+
+<h2>Liste des produits avec moteur de recherche : </h2>
+
+<ul class="list-group">
+    <li *ngFor="let produit of (listProduits | async | filtrePipe:recherche)as folder" class="list-group-item">
+        {{ produit.idProduit}} : {{ produit.nomProduit }} | {{ produit.prixProduit }} €
+    </li>
+</ul>
+
+<div *ngIf="(listProduits | async | filtrePipe:recherche).length <1">
+    <p>Aucun résultat</p>
+</div>
